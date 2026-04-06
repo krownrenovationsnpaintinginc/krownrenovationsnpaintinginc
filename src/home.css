@@ -1,0 +1,181 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #0a0a0a;
+  color: white;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: black;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo {
+  color: gold;
+  font-weight: bold;
+}
+
+.navbar a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e') center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  text-align: center;
+  background: rgba(0,0,0,0.6);
+  padding: 50px;
+}
+
+.hero h1 {
+  color: gold;
+  font-size: 50px;
+}
+
+.btn {
+  background: gold;
+  color: black;
+  padding: 12px 25px;
+  text-decoration: none;
+}
+
+/* SECTIONS */
+.section {
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.dark {
+  background: #111;
+}
+
+/* GRID */
+.grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #1a1a1a;
+  margin: 15px;
+  padding: 25px;
+  width: 250px;
+  border: 1px solid gold;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* GALLERY */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* FORM */
+form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+input, textarea {
+  margin: 10px 0;
+  padding: 12px;
+  border: none;
+}
+
+button {
+  background: gold;
+  border: none;
+  padding: 12px;
+  font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+  padding: 20px;
+  background: black;
+}
+
+.ba-container {
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.ba-container img {
+  width: 100%;
+  display: block;
+}
+
+.after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  overflow: hidden;
+}
+
+.slider {
+  width: 100%;
+}
+.call-btn, .whatsapp-btn {
+  position: fixed;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 22px;
+  color: white;
+  z-index: 1000;
+}
+
+.call-btn {
+  bottom: 90px;
+  background: gold;
+  color: black;
+}
+
+.whatsapp-btn {
+  bottom: 20px;
+  background: #25D366;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
