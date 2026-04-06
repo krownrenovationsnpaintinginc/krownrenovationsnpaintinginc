@@ -1,17 +1,21 @@
 import React, { useState } from "react";
+import { useForm, ValidationError } from "@formspree/react";
+
 import "./home.css";
 import logo from "./assets/images/logo.png";
+import pic1 from "./assets/images/1.png";
+import pic2 from "./assets/images/2.png";
+import pic3 from "./assets/images/3.png";
+import pic4 from "./assets/images/4.png";
+import pic5 from "./assets/images/5.png";
+import QuotationForm from "./QuotationForm";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const closeMenu = () => setMenuOpen(false);
 
-  const projects = [
-    "https://images.unsplash.com/photo-1507089947368-19c1da9775ae",
-    "https://images.unsplash.com/photo-1493809842364-78817add7ffb",
-    "https://images.unsplash.com/photo-1505691938895-1758d7feb511",
-  ];
+  const projects = [pic1, pic2, pic3, pic4, pic5];
 
   return (
     <>
@@ -45,8 +49,8 @@ function App() {
       {/* HERO */}
       <section className="hero">
         <div className="overlay">
-          <h1>Krown Renovations</h1>
-          <p>Premium Renovations & Painting in Toronto</p>
+          <h1>Krown Renovations & Painting Inc.</h1>
+          <p>Premium Renovations & Painting in GTA</p>
           <a href="#contact" className="btn">
             Get a Free Quote
           </a>
@@ -89,13 +93,7 @@ function App() {
       <section id="contact" className="section">
         <h2>Get a Free Quote</h2>
 
-        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
-          <textarea name="message" placeholder="Project details" required />
-
-          <button type="submit">Send</button>
-        </form>
+        <QuotationForm />
       </section>
 
       {/* MAP */}
@@ -103,7 +101,7 @@ function App() {
         <h2>Our Location</h2>
 
         <iframe
-          src="https://www.google.com/maps?q=Toronto&output=embed"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2885.1030058238234!2d-79.83034549999999!3d43.687621899999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e8ff6d6e4e43e63%3A0x3c11eb7a55e18c41!2sKrown%20Renovations%20%26%20Painting%20Inc.!5e0!3m2!1sen!2sca!4v1775449160395!5m2!1sen!2sca"
           style={{ width: "100%", height: "300px", border: 0 }}
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
@@ -113,14 +111,14 @@ function App() {
 
       {/* FOOTER */}
       <footer>
-        <p>© 2026 Krown Renovations & Painting Inc.</p>
+        <p>© 2026 GPS Consultancy Services</p>
       </footer>
 
       {/* FLOATING BUTTONS */}
-      <a href="tel:+1647XXXXXXX" className="call-btn">
+      <a href="tel:+16476408443" className="call-btn">
         📞
       </a>
-      <a href="https://wa.me/1647XXXXXXX" className="whatsapp-btn">
+      <a href="https://wa.me/16476408443" className="whatsapp-btn">
         💬
       </a>
     </>
